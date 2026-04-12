@@ -4,7 +4,7 @@ An informative and musical visual novel made with Ren'Py!
 
 ## Play On itch.io
 
-[link for playing on itch.io](https://felicity666.itch.io/fudge-kingdom)
+[link for playing on itch.io](https://felicity666.itch.io/music-genre-archive)
 
 ## About The Game
 
