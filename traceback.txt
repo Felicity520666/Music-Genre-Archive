@@ -1,0 +1,33 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 275, in script
+    show normal at smallright with miveinright
+  File "game/script.rpy", line 275, in <module>
+    show normal at smallright with miveinright
+                                   ^^^^^^^^^^^
+NameError: name 'miveinright' is not defined. Did you mean: 'moveinright'?
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "game/script.rpy", line 275, in script
+    show normal at smallright with miveinright
+  File "renpy/ast.py", line 1577, in execute
+    paired = renpy.python.py_eval(self.paired)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "renpy/python.py", line 1292, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1285, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 275, in <module>
+    show normal at smallright with miveinright
+                                   ^^^^^^^^^^^
+NameError: name 'miveinright' is not defined. Did you mean: 'moveinright'?
+
+macOS-15.7.3-arm64-arm-64bit arm64
+Ren'Py 8.4.1.25072401
+Music Genre Archive 
+Sun Apr 12 19:29:47 2026

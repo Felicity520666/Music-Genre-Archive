@@ -16,6 +16,7 @@ In this visual novel, I want to create something that is both fun. musical, and 
 - Choice-based dialogue moments 
 - Custom GUI and themed assets 
 - Built with Ren'Py 
+- Go to preferences to adjust text speed, music volume, and much more!
 
 ## Run Locally
 

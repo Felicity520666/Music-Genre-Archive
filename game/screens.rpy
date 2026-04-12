@@ -230,6 +230,61 @@ style choice_button_text is default:
     properties gui.text_properties("choice_button")
 
 
+screen genre_scroll_menu():
+    style_prefix "choice"
+    modal True
+    zorder 110
+
+    frame:
+        xalign 0.5
+        yalign 0.5
+        xmaximum 1320
+        ymaximum 760
+
+        vbox:
+            spacing 12
+            text "Choose a genre:" style "choice_button_text" xalign 0.5
+
+            hbox:
+                spacing 12
+
+                viewport:
+                    id "genre_vp"
+                    draggable True
+                    mousewheel True
+                    xmaximum 1200
+                    ymaximum 620
+
+                    vbox:
+                        spacing gui.choice_spacing
+                        textbutton "Blues" style "genre_choice_button" action Return("blues")
+                        textbutton "Country Music" style "genre_choice_button" action Return("country")
+                        textbutton "Rock'n'Roll" style "genre_choice_button" action Return("rock")
+                        textbutton "Soul/R&B" style "genre_choice_button" action Return("soul")
+                        textbutton "Funk" style "genre_choice_button" action Return("funk")
+                        textbutton "Reggae" style "genre_choice_button" action Return("reggae")
+                        textbutton "Disco" style "genre_choice_button" action Return("disco")
+                        textbutton "Hip Hop" style "genre_choice_button" action Return("hiphop")
+                        textbutton "Electronic" style "genre_choice_button" action Return("electronic")
+                        textbutton "Grunge Music" style "genre_choice_button" action Return("grunge")
+                        textbutton "Pop Music" style "genre_choice_button" action Return("pop")
+                        textbutton "Metal Music" style "genre_choice_button" action Return("metal")
+                        textbutton "Punk Rock" style "genre_choice_button" action Return("pr")
+                        textbutton "Indie Music" style "genre_choice_button" action Return("indie")
+                        textbutton "EDM" style "genre_choice_button" action Return("edm")
+                        textbutton "K-Pop" style "genre_choice_button" action Return("kpop")
+                      
+
+                vbar style "genre_vscrollbar" value YScrollValue("genre_vp")
+
+
+style genre_choice_button is choice_button:
+    xsize 1160
+
+style genre_vscrollbar is vscrollbar:
+    xsize 34
+
+
 ## Quick Menu screen ###########################################################
 ##
 ## The quick menu is displayed in-game to provide easy access to the out-of-

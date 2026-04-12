@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 258: expected end of line
+    play music "funk.mp3" fadeine 0.5
+                          ^
+
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Sun Apr 12 14:45:12 2026
