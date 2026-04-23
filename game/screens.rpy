@@ -273,6 +273,8 @@ screen genre_scroll_menu():
                         textbutton "Indie Music" style "genre_choice_button" action Return("indie")
                         textbutton "EDM" style "genre_choice_button" action Return("edm")
                         textbutton "K-Pop" style "genre_choice_button" action Return("kpop")
+                        textbutton "Trap" style "genre_choice_button" action Return ("trap")
+                        textbutton "Lo-fi" style "genre_choice_button" action Return("lofi")
                       
 
                 vbar style "genre_vscrollbar" value YScrollValue("genre_vp")
