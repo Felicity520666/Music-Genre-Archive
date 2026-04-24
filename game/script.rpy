@@ -187,7 +187,10 @@ label choices:
         jump edm
     elif genre_choice == "kpop":
         jump kpop
-
+    elif genre_choice == "trap": 
+        jump trap
+    elif genre_choice == "lofi": 
+        jump lofi
     else:
         return
 
@@ -392,5 +395,40 @@ label choices:
         hide smile with moveoutright
         scene bts with pushright
         s "Groups like BTS, BLACKPINK, and EXO are at the forefront, known for vibrant music, synchronized dance routines, and dedicated global fanbases."
+        jump choices
+    label trap:
+        scene traa with pushright
+        play music "bombinsound-trap-512482.mp3" fadein 0.5
+        show hap at smallright with moveinright
+        s "Ladies and gentlemen, next up, we have {b}Trap{/b} music!!!"
+        hide hap with moveoutright
+        scene us with dissolve
+        s "It originated in the early 2000s in the Southern United States."
+        scene th with dissolve
+        s "You know what, trap music is a subgenre of hiphop!"
+        scene iiiss with dissolve
+        s "It is characterized by its lyrical content and sound, which includes 808 kick drums, hi-hats, and synthesized melodies."
+        scene goes with dissolve
+        s "Artsts like T.I., Gucci Mane, and Migos have contributed to the genre's popularity, which often explores themes of street life aand struggle."
+        jump choices
+    label lofi:
+        scene lowlow with wipeleft
+        play music "mondamusic-lofi-lofi-girl-lofi-chill-512853.mp3" fadein 1.0
+        show smile at smallright with moveinleft
+        s "I don't know about you, but I personally listen to {b}Lo-fi{/b} a lot when I want to relax or focus on something."
+        s "By looking at this popular Lofi Gril image and listening to the song, does it feel familiar to you? I bet you've used lofi music before, right?"
+        menu:
+            "I sure have ☕🎧🎶☾⋆⁺₊":
+                s "Lol, that's what I thought!"
+                jump continue
+            "No, but I'll check it out‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾.":
+                s "Yeah! It's super chill and worth checking out!"
+                jump continue
+        label continue:
+            hide smile
+            show normal at smallright with dissolve
+            s "Lo-fi music is short for low-fidelity music."
+
+
     return
 
