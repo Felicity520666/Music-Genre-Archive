@@ -428,6 +428,7 @@ label choices:
             hide smile
             show normal at smallright with dissolve
             s "Lo-fi music is short for low-fidelity music."
+            s "It is a genre that embraces imperfections, often featuring mellow"
 
 
     return
