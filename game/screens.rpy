@@ -275,6 +275,7 @@ screen genre_scroll_menu():
                         textbutton "K-Pop" style "genre_choice_button" action Return("kpop")
                         textbutton "Trap" style "genre_choice_button" action Return ("trap")
                         textbutton "Lo-fi" style "genre_choice_button" action Return("lofi")
+                        textbutton "Quit" style "genre_choice_button" action Quit()
                       
 
                 vbar style "genre_vscrollbar" value YScrollValue("genre_vp")

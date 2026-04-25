@@ -108,7 +108,7 @@ label start:
         show smile at smallright
         with dissolve
         s "Sure! I heard you joined the school band, good job!"
-        s "I personally think the most important thing for you to know right now is the different music genres."
+        s "I personally think the most important thing for you to know right now is the different genres of music."
         mc "Um... why are they so important to know?"
         show normal at smallright with dissolve
         s "Well, it expands your musical vocabulary, so you can better understand what the teacher is saying."
@@ -149,7 +149,9 @@ label start:
     scene mus with pushright
     s "Legendary artists such as Louis Armstrong, Duke Ellington, and Miles Davis have contributed to the genre's evolution with their innovative styles and techniques."
     s "Jazz is so cool that it instantly became my favorite genre! And after talking about my favorite two genres..."
+    stop music fadeout 1.0
 label choices:
+    play music "kontraa-no-sleep-hiphop-music-473847.mp3" fadein 1.5
     scene s with irisin
     show smile at smallright
     s "[povname], which genre would you like to learn next?"
@@ -209,6 +211,7 @@ label choices:
         s "The genre often features the guitar, harmonica, and piano."
         scene bm with blinds
         s "Artists like B.B. King, Muddy Waters, and Etta James are known for expressive vocals and instrumental skills that capture the essence of the Blues experience."
+        stop music fadeout 1.0
         jump choices
     label country:
         scene cb with fade
@@ -221,6 +224,7 @@ label choices:
         s "It often includes instruments like the guitar, banjo, and fiddle!"
         scene cmus with pushleft
         s "Artists such as Johnny Cash, Dolly Parton, and Garth Brooks have shaped the genre, making it popular across the United States and beyond with their storytelling and distinctive twangs."
+        stop music fadeout 1.0
         jump choices
     label rock:
         scene rnr with hpunch
@@ -238,19 +242,21 @@ label choices:
         hide smile with moveoutright
         show icons with hpunch
         s "Icons like Elvis Presley, Chuck Berry, and the Beatles were pivotal in popularizing the genre, blending elements of {i}Blues{/i}, {i}Jazz{/i}, and {i}Country Music{/i}."
+        stop music fadeout 1.0
         jump choices
     label soul:
         scene rab with squares
         play music "rb.mp3" fadein 1.0
         show normal at smallright
         with moveinright
-        s "The {b}Soul{/b} music emerged in the African-American Community, combining elements of {i}Gospel{/i}, {i}Blues{/i}, and {i}Jazz{/i}!"
+        s "{b}Soul{/b} music emerged in African-American communities, combining elements of {i}Gospel{/i}, {i}Blues{/i}, and {i}Jazz{/i}!"
         show smile at smallright
         with dissolve
         s "It's known for emotional vocals, smooth rhythms, and instruments like the saxophone, drums, and keyboard."
         hide smile with moveoutright
         scene b with blinds
         s "Artists such as Aretha Franklin, Ray Charles, and Stevie Wonder have been instrumental in defining the soulful sound and emotional depth of the genre."
+        stop music fadeout 1.0
         jump choices
 
     label funk:
@@ -267,6 +273,7 @@ label choices:
         hide smile with moveoutright
         scene pp with zoomin
         s "James Brown, George Clinton, and the band Parliament-Funkadelic are among the key figures that brought Funk to the forefront with their energetic performances and rhythmic innovations."
+        stop music fadeout 1.0
         jump choices
 
     label reggae:
@@ -279,17 +286,19 @@ label choices:
         s "Instruments like the guitar, bass, drums, and keyboard are staples in creating its distinctive sound."
         scene bob with pushleft
         s "Bob Marley, Peter Tosh, and Bunny Wailer are iconic in spreading reggae's messages of love, unity, and social justice worldwide!"
+        stop music fadeout 1.0
         jump choices
     label disco:
         scene do with blinds
         play music "disco.mp3" fadein 0.5
         show hap at smallright with moveinright
         s "{b}Disco{/b}, peaking in the late 1970s, is known for its upbeat dance music!"
-        s "It is characterized by a steady four-on-the-floor beat, synthesized baselines, and string sections."
+        s "It is characterized by a steady four-on-the-floor beat, synthesized basslines, and string sections."
         hide hap 
         show smile at smallright
         with dissolve
         s "Nightclubs were the heart of the disco scene, with artists like Donna Summer, the Bee Gees, and Chic producing hits that defined the era's exuberant nightlife and dance culture!"
+        stop music fadeout 1.0
         jump choices
     label hiphop:
         scene hhh with wiperight
@@ -303,6 +312,7 @@ label choices:
         hide smile with moveoutright
         scene artist with pushright
         s "Artists like Tupac Shakur, The Notorious B.I.G., and Jay-Z have been influential in expressing social and political issues through their lyrics."
+        stop music fadeout 1.0
         jump choices
     label electronic:
         scene ee with vpunch
@@ -318,6 +328,7 @@ label choices:
         s "It uses synthesizers, drum machines, and digital audio workstations."
         scene elec with slideup
         s "Artists like Daft Punk, Calvin Harris, and Tiesto have been pioneers, creating music that energizes dance floors worldwide!"
+        stop music fadeout 1.0
         jump choices
     label grunge:
         scene gr with slidedown
@@ -328,16 +339,18 @@ label choices:
         hide hap
         scene ins with vpunch
         s "With raw, distorted guitar sounds and introspective lyrics, bands like Nirvana, Pearl Jam, and Soundgarden are known for their influential role in popularizing grunge, which later became the soundtrack for Generation X's disillusionment."
+        stop music fadeout 1.0
         jump choices
     label pop:
         scene poppp with wipeleft
         play music "paulyudin-pop-dance-electric-swing-song-475324.mp3" fadein 1.0
         show smile at smallright with moveinright
         s "{b}Pop{/b} music is a broad genre that includes catchy, widely appealing songs often focused on romantic love, but it can also address many other themes!"
-        s "It utilizes simple memorable melodies and hooks, synthesizers and production techniques to enhance its appeal."
+        s "It utilizes simple, memorable melodies and hooks, plus synthesizers and production techniques to enhance its appeal."
         hide smile with moveoutright
         scene ts with pushleft
         s "Artists like Madonna, Michael Jackson, and Taylor Swift have dominated the charts with their pop hits, influencing countless other artists!"
+        stop music fadeout 1.0
         jump choices
     label metal:
         scene mt with vpunch
@@ -350,19 +363,21 @@ label choices:
         hide normal with moveoutright
         scene mr with hpunch 
         s "Bands like Metallica, Iron Maiden, and Black Sabbath have been pivotal in shaping the genre's aggressive sound and theatricality!"
+        stop music fadeout 1.0
         jump choices
     label pr:
         scene bjk with hpunch
         play music "alexgrohl-punk-rock-478794.mp3"
         show hap at smallright with moveinleft
         s "{b}Punk Rock{/b} emerged as a reaction against the perceived excesses of mainstream rock music."
-        s "It promotes a DIY ethic with fast hard-edged music."
+        s "It promotes a DIY ethic with fast, hard-edged music."
         hide hap
         show normal at smallright with dissolve
         s "It often features political or anti-establishment lyrics."
         hide normal with moveoutright
         scene ram with hpunch
         s "Bands like the Ramones, Sex Pistols, and The Clash are seminal figures in the punk movement, embodying its energy and independent spirit!"
+        stop music fadeout 1.0
         jump choices
     label indie:
         scene ind with squares
@@ -375,6 +390,7 @@ label choices:
         hide hap with moveoutright
         scene sar with pushright
         s "Artists like The Smiths, Arcade Fire, and Arctic Monkeys are known for their innovative approaches to music and distinctive soundscapes!"
+        stop music fadeout 1.0
         jump choices
     label edm:
         scene mmm with blinds
@@ -385,6 +401,7 @@ label choices:
         hide smile with moveoutright
         scene nota with pushright
         s "Notable EDM artists include Avicii, Skrillex, and Deadmau5, who have been instrumental in bringing electronic music to a global audience."
+        stop music fadeout 1.0
         jump choices
     label kpop:
         scene hello with squares
@@ -395,6 +412,7 @@ label choices:
         hide smile with moveoutright
         scene bts with pushright
         s "Groups like BTS, BLACKPINK, and EXO are at the forefront, known for vibrant music, synchronized dance routines, and dedicated global fanbases."
+        stop music fadeout 1.0
         jump choices
     label trap:
         scene traa with pushright
@@ -405,30 +423,39 @@ label choices:
         scene us with dissolve
         s "It originated in the early 2000s in the Southern United States."
         scene th with dissolve
-        s "You know what, trap music is a subgenre of hiphop!"
+        s "You know what, trap music is a subgenre of hip-hop!"
         scene iiiss with dissolve
         s "It is characterized by its lyrical content and sound, which includes 808 kick drums, hi-hats, and synthesized melodies."
         scene goes with dissolve
-        s "Artsts like T.I., Gucci Mane, and Migos have contributed to the genre's popularity, which often explores themes of street life aand struggle."
+        s "Artists like T.I., Gucci Mane, and Migos have contributed to the genre's popularity, which often explores themes of street life and struggle."
+        stop music fadeout 1.0
         jump choices
     label lofi:
         scene lowlow with wipeleft
         play music "mondamusic-lofi-lofi-girl-lofi-chill-512853.mp3" fadein 1.0
         show smile at smallright with moveinleft
         s "I don't know about you, but I personally listen to {b}Lo-fi{/b} a lot when I want to relax or focus on something."
-        s "By looking at this popular Lofi Gril image and listening to the song, does it feel familiar to you? I bet you've used lofi music before, right?"
+        s "By looking at this popular Lo-fi Girl image and listening to the song, does it feel familiar to you? I bet you've listened to lo-fi music before, right?"
         menu:
-            "I sure have ☕🎧🎶☾⋆⁺₊":
+            "I sure have ☕🎧🎶":
                 s "Lol, that's what I thought!"
                 jump continue
-            "No, but I'll check it out‧₊˚ ☁️⋅♡𓂃 ࣪ ִֶָ☾.":
+            "No, but I'll check it out 🌆📼☁️":
                 s "Yeah! It's super chill and worth checking out!"
                 jump continue
         label continue:
             hide smile
             show normal at smallright with dissolve
             s "Lo-fi music is short for low-fidelity music."
-            s "It is a genre that embraces imperfections, often featuring mellow"
+            s "It is a genre that embraces imperfections, often featuring mellow beats, a mix of analog warmth, and slight recording imperfections."
+            hide normal with moveoutright
+            scene capy with dissolve
+            s "It's become popular for studying, relaxing, or creating a cozy atmosphere."
+            scene pro
+            s "Artists and producers like Nujabes, J Dilla, and ChilledCow, known for lo-fi hip-hop streams, have been pivotal in popularizing this genre's calming and atmospheric soundscapes."
+            stop music fadeout 1.0
+            jump choices
+
 
 
     return
