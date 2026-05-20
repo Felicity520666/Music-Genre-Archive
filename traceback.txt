@@ -1,33 +1,75 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 275, in script
-    show normal at smallright with miveinright
-  File "game/script.rpy", line 275, in <module>
-    show normal at smallright with miveinright
-                                   ^^^^^^^^^^^
-NameError: name 'miveinright' is not defined. Did you mean: 'moveinright'?
+After initialization, but before game start.
+  File "game/script.rpy", line 468, in analyze_screen
+    screen knowledge_periods():
+  File "game/script.rpy", line 468, in analyze
+    screen knowledge_periods():
+  File "game/script.rpy", line 468, in analyze
+    screen knowledge_periods():
+  File "game/script.rpy", line 470, in analyze
+    frame:
+  File "game/script.rpy", line 470, in analyze
+    frame:
+  File "game/script.rpy", line 476, in analyze
+    vbox:
+  File "game/script.rpy", line 476, in analyze
+    vbox:
+  File "game/script.rpy", line 478, in analyze
+    if pop_up = "menu":
+  File "game/script.rpy", line 478
+    pop_up = "menu"
+           ^^^^^^^^
+SyntaxError: invalid syntax
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 275, in script
-    show normal at smallright with miveinright
-  File "renpy/ast.py", line 1577, in execute
-    paired = renpy.python.py_eval(self.paired)
-             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "renpy/python.py", line 1292, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1285, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/script.rpy", line 275, in <module>
-    show normal at smallright with miveinright
-                                   ^^^^^^^^^^^
-NameError: name 'miveinright' is not defined. Did you mean: 'moveinright'?
+  File "renpy/bootstrap.py", line 376, in bootstrap
+    renpy.main.main()
+    ~~~~~~~~~~~~~~~^^
+  File "renpy/main.py", line 614, in main
+    run(restart)
+    ~~~^^^^^^^^^
+  File "renpy/main.py", line 78, in run
+    renpy.display.screen.analyze_screens()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "renpy/display/screen.py", line 1006, in analyze_screens
+    s.ast.analyze_screen()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "game/script.rpy", line 468, in analyze_screen
+    screen knowledge_periods():
+  File "game/script.rpy", line 468, in analyze
+    screen knowledge_periods():
+  File "game/script.rpy", line 468, in analyze
+    screen knowledge_periods():
+  File "game/script.rpy", line 470, in analyze
+    frame:
+  File "game/script.rpy", line 470, in analyze
+    frame:
+  File "game/script.rpy", line 476, in analyze
+    vbox:
+  File "game/script.rpy", line 476, in analyze
+    vbox:
+  File "game/script.rpy", line 478, in analyze
+    if pop_up = "menu":
+  File "renpy/pyanalysis.py", line 674, in is_constant_expr
+    node, literal = ccache.ast_eval_literal(expr)
+                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "renpy/pyanalysis.py", line 895, in ast_eval_literal
+    expr = py_compile(expr, "eval", ast_node=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1247, in py_compile
+    raise e
+  File "renpy/python.py", line 1177, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, True)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 478
+    pop_up = "menu"
+           ^^^^^^^^
+SyntaxError: invalid syntax
 
 macOS-15.7.3-arm64-arm-64bit arm64
 Ren'Py 8.4.1.25072401
 Music Genre Archive 
-Sun Apr 12 19:29:47 2026
+Mon May 18 13:33:40 2026

@@ -2,7 +2,7 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
+default popup_page = "menu"
 define f = Character("[povname]", color = "#e10072")
 define m = Character("[povname]", color = "#66ff00") 
 define s = Character("Serenity", color = "#ff5400")
@@ -123,7 +123,23 @@ label start:
     with moveinleft
     s "First up, we have {b}classical{/b} music! It is a genre that encompasses a wide range of styles and compositions."
     s "It is primarily instrumental from the {i}Baroque{/i}, {i}Classical{/i}, and {i}Romantic{/i} periods."
+   
+    menu:
+        "Do you want to learn more about the {i}Baroque{/i}, {i}Classical{/i}, and {i}Romantic{/i} periods?"
+        "Learn more":
+            $ popup_page = "menu"
+            call screen knowledge_periods
+        "Pass":
+            pass
+
     s "Classical music is known for its structured forms, such as {i}Symphonies{/i}, {i}Concertos{/i}, and {i}Sonatas{/i}."
+    menu:
+        "Do you want to learn more about {i}Symphony{/i}, {i}Concerto{/i}, and {i}Sonata{/i}?"
+        "Learn more":
+            $ popup_page = "menu"
+            call screen structure_info
+        "Pass":
+            pass
     hide normal with dissolve
     show vpc with dissolve
     s "Some instruments commonly used include the violin, piano, and cello."
@@ -250,6 +266,7 @@ label choices:
         show normal at smallright
         with moveinright
         s "{b}Soul{/b} music emerged in African-American communities, combining elements of {i}Gospel{/i}, {i}Blues{/i}, and {i}Jazz{/i}!"
+        hide normal
         show smile at smallright
         with dissolve
         s "It's known for emotional vocals, smooth rhythms, and instruments like the saxophone, drums, and keyboard."
@@ -360,6 +377,13 @@ label choices:
         hide hap
         show normal with dissolve
         s "It includes subgenres like Heavy Metal, Death Metal, and Black Metal, each with its own distinct characteristics and dedicated fanbase."
+        menu:
+            "Do you want to learn more about the subgenres?"
+            "Learn more":
+                $ popup_page = "menu"
+                call screen metal_subgenres
+            "Pass":
+                pass
         hide normal with moveoutright
         scene mr with hpunch 
         s "Bands like Metallica, Iron Maiden, and Black Sabbath have been pivotal in shaping the genre's aggressive sound and theatricality!"
@@ -455,6 +479,149 @@ label choices:
             s "Artists and producers like Nujabes, J Dilla, and ChilledCow, known for lo-fi hip-hop streams, have been pivotal in popularizing this genre's calming and atmospheric soundscapes."
             stop music fadeout 1.0
             jump choices
+
+        screen knowledge_periods():
+            modal True
+            frame:
+                xalign 0.5
+                yalign 0.5
+                padding (40, 40)
+                vbox:
+                    spacing 20
+                    if popup_page == "menu":
+
+                        text "Extra Information: Baroque, Classical, and Romantic Periods" size 36
+                        text "In Western music history, the {b}Baroque{/b}, {b}Classical{/b}, and {b}Romantic{/b} periods are the three major musical eras. Each period has its own style, sound, and famous composers." size 26
+                        textbutton "Baroque Period":
+                            action SetVariable("popup_page", "baroque")
+
+                        textbutton "Classical period":
+                            action SetVariable("popup_page", "classical")
+
+                        textbutton "Romantic period":
+                            action SetVariable("popup_page", "romantic")
+                    
+                        textbutton "Close":
+                            action Return()
+                    
+                    elif popup_page == "baroque":
+                        text "{b}Baroque Period{/b} —— About 1600-1750" size 32
+                        text "Baroque music is often fancy, dramatic, and complex. It uses many decorative notes and strong rhythms. Some famous composers are Bach, Handel, and Vivaldi." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+
+                        textbutton "Close":
+                            action Return()
+                    elif popup_page == "classical":
+                        text "{b}Classical Period{/b} —— About 1750-1820" size 36
+                        text "Classical music is usually clear, balances, and elegant. The melodies are easier to follow, and the structure is organized. Some famous composers are Mozard, Haydn, and Beethoven." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+                        textbutton "Close":
+                            action Return()
+                    
+                    elif popup_page =="romantic":
+                        text "{b}Romantic Period{/b} —— About 1820-1910" size 36
+                        text "Romantic music focuses on strong emotions, imagination, and drama. It can sound powerful, dreamy, sad, or passionate. Some famous composers are Chopin, Tchaikovsky, and Liszt." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+                        textbutton "Close":
+                            action Return()
+        screen structure_info():
+            modal True
+            frame:
+                xalign 0.5
+                yalign 0.5
+                padding (40, 40)
+                vbox:
+                    spacing 20
+                    if popup_page == "menu":
+
+                        text "Extra Information: Symphony, Concerto, and Sonata" size 36
+                        text "These are three important structured forms in Classical music, primarily distinguished by who is playing and how many parts they have." size 26
+                        textbutton "Symphony":
+                            action SetVariable("popup_page", "symphony")
+
+                        textbutton "Concerto":
+                            action SetVariable("popup_page", "concerto")
+
+                        textbutton "Sonata":
+                            action SetVariable("popup_page", "sonata")
+
+                        textbutton "Close":
+                            action Return()
+                    
+                    elif popup_page == "symphony":
+                        text "{b}Symphony{/b} —— whole orchestra" size 32
+                        text "A symphony is a large piece of music for a full orchestra. It usually has several sections called movements." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+
+                        textbutton "Close":
+                            action Return()
+                    elif popup_page == "concerto":
+                        text "{b}Concerto{/b} —— solo instrument with orchestra" size 36
+                        text "A concerto is usually written for one solo instrument and an orchestra. For example, a piano concerto has a pianist playing the main part, while the orchestra plays the accompanying parts." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+                        textbutton "Close":
+                            action Return()
+                    
+                    elif popup_page =="sonata":
+                        text "{b}Sonata{/b} —— one or few instruments" size 36
+                        text "A sonata is usually written for one or a small group of instruments. For example, a piano sonata may be played by only one pianist." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+                        textbutton "Close":
+                            action Return()
+        screen metal_subgenres():
+            modal True
+            frame:
+                xalign 0.5
+                yalign 0.5
+                padding (40, 40)
+                vbox:
+                    spacing 20
+                    if popup_page == "menu":
+
+                        text "Extra Information: Heavy Metal, Death Metal, and Black Metal" size 36
+                        text "These are the three important subgenres of Metal music, which all use loud electric guitars, strong drums, and intense energy, but they create different feelings." size 26
+                        textbutton "Heavy Metal":
+                            action SetVariable("popup_page", "heavy")
+
+                        textbutton "Death Metal":
+                            action SetVariable("popup_page", "death")
+
+                        textbutton "Black Metal":
+                            action SetVariable("popup_page", "black")
+
+                        textbutton "Close":
+                            action Return()
+                    
+                    elif popup_page == "heavy":
+                        text "{b}Heavy Metal{/b} —— classic, powerful, and dramatic" size 32
+                        text "Heavy Metal is the classic and original style of metal music. It usually has loud electric guitars, strong drums, powerful vocals, and dramatic energy. It can sound intense, heroic, or rebellious." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+
+                        textbutton "Close":
+                            action Return()
+                    elif popup_page == "death":
+                        text "{b}Death Metal{/b} —— heavier, faster, and brutal" size 32
+                        text "Death Metal is usually heavier, faster, and more aggressive than classic Heavy Metal. It often uses very low growling vocals, fast drums, complex guitar riffs, and dark themes." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+                        textbutton "Close":
+                            action Return()
+                    
+                    elif popup_page =="black":
+                        text "{b}Black Metal{/b} —— drak, cold, and mysterious" size 36
+                        text "Black Metal often sounds cold, raw, dark, and atmosphric. It may use high screaming vocals, fast \"blast beat\" drums, tremolo-picked guitars, and mysterious or anti-mainstream themes." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+                        textbutton "Close":
+                            action Return()
+
 
 
 
