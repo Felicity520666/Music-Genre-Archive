@@ -143,6 +143,12 @@ label start:
     hide normal with dissolve
     show vpc with dissolve
     s "Some instruments commonly used include the violin, piano, and cello."
+    menu: 
+        "Do you want to learn more about the instruments?"
+        "Learn more":
+            call screen music_genre_popup("classical")
+        "Pass":
+            pass
     hide vpc with dissolve
     show mbb with dissolve
     s "Lastly, famous composers like {i}Mozart{/i}, {i}Beethoven{/i}, and {i}Bach{/i} have left a significant impact on music history with their complex compositions and innovations."
@@ -162,6 +168,12 @@ label start:
     hide smile with dissolve
     show sax with dissolve
     s "Instruments like the saxophone, trumpet, and double bass are pivotal, alongside the piano and drums."
+    menu: 
+        "Do you want to learn more about the instruments?"
+        "Learn more":
+            call screen music_genre_popup("jazz")
+        "Pass":
+            pass
     scene mus with pushright
     s "Legendary artists such as Louis Armstrong, Duke Ellington, and Miles Davis have contributed to the genre's evolution with their innovative styles and techniques."
     s "Jazz is so cool that it instantly became my favorite genre! And after talking about my favorite two genres..."
@@ -225,6 +237,12 @@ label choices:
         hide normal with dissolve
         show bl with vpunch
         s "The genre often features the guitar, harmonica, and piano."
+        menu: 
+        "Do you want to learn more about the instruments?"
+        "Learn more":
+            call screen music_genre_popup("blues")
+        "Pass":
+            pass
         scene bm with blinds
         s "Artists like B.B. King, Muddy Waters, and Etta James are known for expressive vocals and instrumental skills that capture the essence of the Blues experience."
         stop music fadeout 1.0
@@ -238,6 +256,12 @@ label choices:
         hide hap with dissolve
         show yo with hpunch
         s "It often includes instruments like the guitar, banjo, and fiddle!"
+        menu: 
+        "Do you want to learn more about the instruments?"
+        "Learn more":
+            call screen music_genre_popup("country")
+        "Pass":
+            pass
         scene cmus with pushleft
         s "Artists such as Johnny Cash, Dolly Parton, and Garth Brooks have shaped the genre, making it popular across the United States and beyond with their storytelling and distinctive twangs."
         stop music fadeout 1.0
@@ -251,6 +275,12 @@ label choices:
         hide hap with dissolve
         show roll with vpunch
         s "Its upbeat tempo and use of electric guitars, drums, and bass!"
+        menu: 
+        "Do you want to learn more about the instruments?"
+        "Learn more":
+            call screen music_genre_popup("rock")
+        "Pass":
+            pass
         hide roll with hpunch
         show smile at smallright
         with moveinleft
@@ -270,6 +300,12 @@ label choices:
         show smile at smallright
         with dissolve
         s "It's known for emotional vocals, smooth rhythms, and instruments like the saxophone, drums, and keyboard."
+        menu: 
+        "Do you want to learn more about the instruments?"
+        "Learn more":
+            call screen music_genre_popup("soul")
+        "Pass":
+            pass
         hide smile with moveoutright
         scene b with blinds
         s "Artists such as Aretha Franklin, Ray Charles, and Stevie Wonder have been instrumental in defining the soulful sound and emotional depth of the genre."
@@ -286,7 +322,13 @@ label choices:
         show smile at smallright
         with dissolve
         s "Funk is characterized by a strong bassline, electric guitars, and drums."
-        s "It emphasizes groove and rhythm."
+        menu: 
+        "Do you want to learn more about the instruments?"
+        "Learn more":
+            call screen music_genre_popup("funk")
+        "Pass":
+            pass
+        s "And Funk emphasizes groove and rhythm."
         hide smile with moveoutright
         scene pp with zoomin
         s "James Brown, George Clinton, and the band Parliament-Funkadelic are among the key figures that brought Funk to the forefront with their energetic performances and rhythmic innovations."
@@ -301,6 +343,12 @@ label choices:
         hide normal with moveoutright
         show reg with squares
         s "Instruments like the guitar, bass, drums, and keyboard are staples in creating its distinctive sound."
+        menu: 
+        "Do you want to learn more about the instruments?"
+        "Learn more":
+            call screen music_genre_popup("reggae")
+        "Pass":
+            pass
         scene bob with pushleft
         s "Bob Marley, Peter Tosh, and Bunny Wailer are iconic in spreading reggae's messages of love, unity, and social justice worldwide!"
         stop music fadeout 1.0
@@ -343,6 +391,12 @@ label choices:
         hide smile with moveoutleft
         scene ar with blinds
         s "It uses synthesizers, drum machines, and digital audio workstations."
+        menu: 
+        "Do you want to learn more about the instruments?"
+        "Learn more":
+            call screen music_genre_popup("electronic")
+        "Pass":
+            pass
         scene elec with slideup
         s "Artists like Daft Punk, Calvin Harris, and Tiesto have been pioneers, creating music that energizes dance floors worldwide!"
         stop music fadeout 1.0
