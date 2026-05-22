@@ -71,76 +71,79 @@ screen music_genre_popup(genre):
                     action Return()
                     
             elif genre =="rock":
-                text "Extra Information: violin, piano, and cello." size 36
-                text "Those three instruments are foundational pillars of Western classical music." size 26
-                textbutton "Violin":
-                    action [SetVariable("instrument_page", "violin"), Show("instrument_info_popup")]
+                text "Extra Information: electric guitars, drums, and bass." size 36
+                text "Electric guitars, drums, and bass form the foundational blueprint of rock music. Together, they create the Rhythm Section." size 26
+                textbutton "Electric Guitar":
+                    action [SetVariable("instrument_page", "electric_guitar"), Show("instrument_info_popup")]
 
-                textbutton "Piano":
-                    action [SetVariable("instrument_page", "piano"), Show("instrument_info_popup")]
+                textbutton "Drums":
+                    action [SetVariable("instrument_page", "drums"), Show("instrument_info_popup")]
 
-                textbutton "Cello":
-                    action [SetVariable("instrument_page", "cello"), Show("instrument_info_popup")]
+                textbutton "Bass":
+                    action [SetVariable("instrument_page", "bass"), Show("instrument_info_popup")]
 
                 textbutton "Close":
                     action Return()
                         
-            elif popup_page =="soul":
-                text "Extra Information: violin, piano, and cello." size 36
-                text "Those three instruments are foundational pillars of Western classical music." size 26
-                textbutton "Violin":
-                    action [SetVariable("instrument_page", "violin"), Show("instrument_info_popup")]
+            elif genre =="soul":
+                text "Extra Information: saxophone, drums, and keyboard." size 36
+                text "They represent the three pillars of the genre: the saxophone brings vocal-like emotional expression, the drums establish the driving groove and backbeat, and the keyboard delivers the rich, gospel-rooted harmonies." size 26
+                textbutton "Saxophone":
+                    action [SetVariable("instrument_page", "saxophone"), Show("instrument_info_popup")]
 
-                textbutton "Piano":
-                    action [SetVariable("instrument_page", "piano"), Show("instrument_info_popup")]
+                textbutton "Drums":
+                    action [SetVariable("instrument_page", "drums"), Show("instrument_info_popup")]
 
-                textbutton "Cello":
-                    action [SetVariable("instrument_page", "cello"), Show("instrument_info_popup")]
+                textbutton "Keyboard":
+                    action [SetVariable("instrument_page", "keyboard"), Show("instrument_info_popup")]
 
                 textbutton "Close":
                     action Return()
                   
-            elif popup_page =="funk":
-                text "Extra Information: violin, piano, and cello." size 36
-                text "Those three instruments are foundational pillars of Western classical music." size 26
-                textbutton "Violin":
-                    action [SetVariable("instrument_page", "violin"), Show("instrument_info_popup")]
+            elif genre =="funk":
+                text "Extra Information: bassline, electric guitars, and drums." size 36
+                text "In funk, the bassline, electric guitars, and drums act as interlocking parts of a single, rhythmic machine." size 26
+                textbutton "Bassline":
+                    action [SetVariable("instrument_page", "bassline"), Show("instrument_info_popup")]
 
-                textbutton "Piano":
-                    action [SetVariable("instrument_page", "piano"), Show("instrument_info_popup")]
+                textbutton "Electric Guitar":
+                    action [SetVariable("instrument_page", "electric_guitar"), Show("instrument_info_popup")]
 
-                textbutton "Cello":
-                    action [SetVariable("instrument_page", "cello"), Show("instrument_info_popup")]
-
-                textbutton "Close":
-                    action Return()
-
-            elif popup_page =="reggae":
-                text "Extra Information: violin, piano, and cello." size 36
-                text "Those three instruments are foundational pillars of Western classical music." size 26
-                textbutton "Violin":
-                    action [SetVariable("instrument_page", "violin"), Show("instrument_info_popup")]
-
-                textbutton "Piano":
-                    action [SetVariable("instrument_page", "piano"), Show("instrument_info_popup")]
-
-                textbutton "Cello":
-                    action [SetVariable("instrument_page", "cello"), Show("instrument_info_popup")]
+                textbutton "Drums":
+                    action [SetVariable("instrument_page", "drums"), Show("instrument_info_popup")]
 
                 textbutton "Close":
                     action Return()
 
-            elif popup_page =="electronic":
-                text "Extra Information: violin, piano, and cello." size 36
-                text "Those three instruments are foundational pillars of Western classical music." size 26
-                textbutton "Violin":
-                    action [SetVariable("instrument_page", "violin"), Show("instrument_info_popup")]
+            elif genre =="reggae":
+                text "Extra Information: guitar, bass, drums, and keyboard." size 36
+                text "Those instruments create the signature syncopated, bouncing groove of the genre, with the bass and drums functioning as the absolute heartbeat while the guitar and keyboard provide harmonic and rhymic texture." size 26
+                textbutton "Guitar":
+                    action [SetVariable("instrument_page", "guitar"), Show("instrument_info_popup")]
 
-                textbutton "Piano":
-                    action [SetVariable("instrument_page", "piano"), Show("instrument_info_popup")]
+                textbutton "Bass":
+                    action [SetVariable("instrument_page", "bass"), Show("instrument_info_popup")]
 
-                textbutton "Cello":
-                    action [SetVariable("instrument_page", "cello"), Show("instrument_info_popup")]
+                textbutton "Drums":
+                    action [SetVariable("instrument_page", "drums"), Show("instrument_info_popup")]
+
+                textbutton "Keyboard":
+                    action [SetVariable("instrument_page", "keyboard"), Show("instrument_info_popup")]
+
+                textbutton "Close":
+                    action Return()
+
+            elif genre =="electronic":
+                text "Extra Information: synthesizers, drum machines, and digital audio workstations." size 36
+                text "Those three instruments are the foundational building blocks of electronic music." size 26
+                textbutton "Synthesizers":
+                    action [SetVariable("instrument_page", "synthesizers"), Show("instrument_info_popup")]
+
+                textbutton "Drum Machines":
+                    action [SetVariable("instrument_page", "drum_machines"), Show("instrument_info_popup")]
+
+                textbutton "Digital Audio Workstations":
+                    action [SetVariable("instrument_page", "digital_audio_workstations"), Show("instrument_info_popup")]
 
                 textbutton "Close":
                     action Return()

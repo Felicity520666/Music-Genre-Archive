@@ -238,11 +238,11 @@ label choices:
         show bl with vpunch
         s "The genre often features the guitar, harmonica, and piano."
         menu: 
-        "Do you want to learn more about the instruments?"
-        "Learn more":
-            call screen music_genre_popup("blues")
-        "Pass":
-            pass
+            "Do you want to learn more about the instruments?"
+            "Learn more":
+                call screen music_genre_popup("blues")
+            "Pass":
+                pass
         scene bm with blinds
         s "Artists like B.B. King, Muddy Waters, and Etta James are known for expressive vocals and instrumental skills that capture the essence of the Blues experience."
         stop music fadeout 1.0
@@ -257,11 +257,11 @@ label choices:
         show yo with hpunch
         s "It often includes instruments like the guitar, banjo, and fiddle!"
         menu: 
-        "Do you want to learn more about the instruments?"
-        "Learn more":
-            call screen music_genre_popup("country")
-        "Pass":
-            pass
+            "Do you want to learn more about the instruments?"
+            "Learn more":
+                call screen music_genre_popup("country")
+            "Pass":
+                pass
         scene cmus with pushleft
         s "Artists such as Johnny Cash, Dolly Parton, and Garth Brooks have shaped the genre, making it popular across the United States and beyond with their storytelling and distinctive twangs."
         stop music fadeout 1.0
@@ -276,11 +276,11 @@ label choices:
         show roll with vpunch
         s "Its upbeat tempo and use of electric guitars, drums, and bass!"
         menu: 
-        "Do you want to learn more about the instruments?"
-        "Learn more":
-            call screen music_genre_popup("rock")
-        "Pass":
-            pass
+            "Do you want to learn more about the instruments?"
+            "Learn more":
+                call screen music_genre_popup("rock")
+            "Pass":
+                pass
         hide roll with hpunch
         show smile at smallright
         with moveinleft
@@ -301,11 +301,11 @@ label choices:
         with dissolve
         s "It's known for emotional vocals, smooth rhythms, and instruments like the saxophone, drums, and keyboard."
         menu: 
-        "Do you want to learn more about the instruments?"
-        "Learn more":
-            call screen music_genre_popup("soul")
-        "Pass":
-            pass
+            "Do you want to learn more about the instruments?"
+            "Learn more":
+                call screen music_genre_popup("soul")
+            "Pass":
+                pass
         hide smile with moveoutright
         scene b with blinds
         s "Artists such as Aretha Franklin, Ray Charles, and Stevie Wonder have been instrumental in defining the soulful sound and emotional depth of the genre."
@@ -321,19 +321,19 @@ label choices:
         hide hap 
         show smile at smallright
         with dissolve
-        s "Funk is characterized by a strong bassline, electric guitars, and drums."
-        menu: 
+        s "It is characterized by a strong bassline, electric guitars, and drums."
+    menu: 
         "Do you want to learn more about the instruments?"
         "Learn more":
             call screen music_genre_popup("funk")
         "Pass":
             pass
-        s "And Funk emphasizes groove and rhythm."
-        hide smile with moveoutright
-        scene pp with zoomin
-        s "James Brown, George Clinton, and the band Parliament-Funkadelic are among the key figures that brought Funk to the forefront with their energetic performances and rhythmic innovations."
-        stop music fadeout 1.0
-        jump choices
+    s "Funk emphasizes groove and rhythm."
+    hide smile with moveoutright
+    scene pp with zoomin
+    s "James Brown, George Clinton, and the band Parliament-Funkadelic are among the key figures that brought Funk to the forefront with their energetic performances and rhythmic innovations."
+    stop music fadeout 1.0
+    jump choices
 
     label reggae:
         scene jam with zoomin
@@ -343,16 +343,17 @@ label choices:
         hide normal with moveoutright
         show reg with squares
         s "Instruments like the guitar, bass, drums, and keyboard are staples in creating its distinctive sound."
-        menu: 
+    menu: 
         "Do you want to learn more about the instruments?"
         "Learn more":
             call screen music_genre_popup("reggae")
         "Pass":
             pass
-        scene bob with pushleft
-        s "Bob Marley, Peter Tosh, and Bunny Wailer are iconic in spreading reggae's messages of love, unity, and social justice worldwide!"
-        stop music fadeout 1.0
-        jump choices
+    scene bob with pushleft
+    s "Bob Marley, Peter Tosh, and Bunny Wailer are iconic in spreading reggae's messages of love, unity, and social justice worldwide!"
+    stop music fadeout 1.0
+    jump choices
+    
     label disco:
         scene do with blinds
         play music "disco.mp3" fadein 0.5
@@ -391,16 +392,17 @@ label choices:
         hide smile with moveoutleft
         scene ar with blinds
         s "It uses synthesizers, drum machines, and digital audio workstations."
-        menu: 
+    menu: 
         "Do you want to learn more about the instruments?"
         "Learn more":
             call screen music_genre_popup("electronic")
         "Pass":
             pass
-        scene elec with slideup
-        s "Artists like Daft Punk, Calvin Harris, and Tiesto have been pioneers, creating music that energizes dance floors worldwide!"
-        stop music fadeout 1.0
-        jump choices
+    scene elec with slideup
+    s "Artists like Daft Punk, Calvin Harris, and Tiesto have been pioneers, creating music that energizes dance floors worldwide!"
+    stop music fadeout 1.0
+    jump choices
+    
     label grunge:
         scene gr with slidedown
         play music "nightcast-grunge-diner-176898.mp3"
@@ -431,18 +433,19 @@ label choices:
         hide hap
         show normal with dissolve
         s "It includes subgenres like Heavy Metal, Death Metal, and Black Metal, each with its own distinct characteristics and dedicated fanbase."
-        menu:
-            "Do you want to learn more about the subgenres?"
-            "Learn more":
-                $ popup_page = "menu"
-                call screen metal_subgenres
-            "Pass":
-                pass
-        hide normal with moveoutright
-        scene mr with hpunch 
-        s "Bands like Metallica, Iron Maiden, and Black Sabbath have been pivotal in shaping the genre's aggressive sound and theatricality!"
-        stop music fadeout 1.0
-        jump choices
+    menu:
+        "Do you want to learn more about the subgenres?"
+        "Learn more":
+            $ popup_page = "menu"
+            call screen metal_subgenres
+        "Pass":
+            pass
+    hide normal with moveoutright
+    scene mr with hpunch 
+    s "Bands like Metallica, Iron Maiden, and Black Sabbath have been pivotal in shaping the genre's aggressive sound and theatricality!"
+    stop music fadeout 1.0
+    jump choices
+
     label pr:
         scene bjk with hpunch
         play music "alexgrohl-punk-rock-478794.mp3"
@@ -514,25 +517,32 @@ label choices:
         show smile at smallright with moveinleft
         s "I don't know about you, but I personally listen to {b}Lo-fi{/b} a lot when I want to relax or focus on something."
         s "By looking at this popular Lo-fi Girl image and listening to the song, does it feel familiar to you? I bet you've listened to lo-fi music before, right?"
+    menu:
+        "I sure have ☕🎧🎶":
+            s "Lol, that's what I thought!"
+            jump continue
+        "No, but I'll check it out 🌆📼☁️":
+            s "Yeah! It's super chill and worth checking out!"
+            jump continue
+    label continue:
+        hide smile
+        show normal at smallright with dissolve
+        s "Lo-fi music is short for low-fidelity music."
+        s "It is a genre that embraces imperfections, often featuring mellow beats, a mix of analog warmth, and slight recording imperfections."
+        hide normal with moveoutright
+        scene capy with dissolve
+        s "It's become popular for studying, relaxing, or creating a cozy atmosphere."
+        scene pro
+        s "Artists and producers like Nujabes, J Dilla, and ChilledCow, known for lo-fi hip-hop streams, have been pivotal in popularizing this genre's calming and atmospheric soundscapes."
         menu:
-            "I sure have ☕🎧🎶":
-                s "Lol, that's what I thought!"
-                jump continue
-            "No, but I'll check it out 🌆📼☁️":
-                s "Yeah! It's super chill and worth checking out!"
-                jump continue
-        label continue:
-            hide smile
-            show normal at smallright with dissolve
-            s "Lo-fi music is short for low-fidelity music."
-            s "It is a genre that embraces imperfections, often featuring mellow beats, a mix of analog warmth, and slight recording imperfections."
-            hide normal with moveoutright
-            scene capy with dissolve
-            s "It's become popular for studying, relaxing, or creating a cozy atmosphere."
-            scene pro
-            s "Artists and producers like Nujabes, J Dilla, and ChilledCow, known for lo-fi hip-hop streams, have been pivotal in popularizing this genre's calming and atmospheric soundscapes."
-            stop music fadeout 1.0
-            jump choices
+            "Do you want to learn more about these artists and producers?"
+            "Learn more":
+                $ popup_page = "menu"
+                call screen lofi_artists
+            "Pass":
+                pass
+        stop music fadeout 1.0
+        jump choices
 
         screen knowledge_periods():
             modal True
