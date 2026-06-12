@@ -15,6 +15,7 @@ In this visual novel, I want to create something that is both fun. musical, and 
 - Story-driven informative visual novel experience 
 - Choice-based dialogue moments 
 - Custom GUI and themed assets 
+- Optional pop-up extra information pages on supplemetary topics
 - Built with Ren'Py 
 - Go to preferences to adjust text speed, music volume, and much more!
 
