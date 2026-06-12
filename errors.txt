@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/game/knowledge_music.rpy", line 3: 'model' is not a keyword argument or valid child of the screen statement.
-    model True
-         ^
-
-File "game/game/knowledge_music.rpy", line 152: 'model' is not a keyword argument or valid child of the screen statement.
-    model True
+File "game/game/knowledge_music.rpy", line 160: vbox expects a non-empty block.
+    vbox:
          ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Fri May 22 11:38:48 2026
+Thu Jun 11 16:02:52 2026

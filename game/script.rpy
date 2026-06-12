@@ -648,7 +648,7 @@ label choices:
                     spacing 20
                     if popup_page == "menu":
 
-                        text "Extra Information: Heavy Metal, Death Metal, and Black Metal" size 36
+                        text "Extra Information: Heavy Metal, Death Metal, and Black Metal" size 32
                         text "These are the three important subgenres of Metal music, which all use loud electric guitars, strong drums, and intense energy, but they create different feelings." size 26
                         textbutton "Heavy Metal":
                             action SetVariable("popup_page", "heavy")
@@ -679,12 +679,58 @@ label choices:
                             action Return()
                     
                     elif popup_page =="black":
-                        text "{b}Black Metal{/b} —— drak, cold, and mysterious" size 36
+                        text "{b}Black Metal{/b} —— drak, cold, and mysterious" size 32
                         text "Black Metal often sounds cold, raw, dark, and atmosphric. It may use high screaming vocals, fast \"blast beat\" drums, tremolo-picked guitars, and mysterious or anti-mainstream themes." size 24
                         textbutton "Back":
                             action SetVariable("popup_page", "menu")
                         textbutton "Close":
                             action Return()
+        screen lofi_artists():
+            modal True
+            frame:
+                xalign 0.5
+                yalign 0.5
+                padding (40, 40)
+                vbox:
+                    spacing 20
+                    if popup_page == "menu":
+
+                        text "Extra Information: Nujabes, J Dilla, and ChilledCow" size 32
+                        text "They are legendary, highly influential hip-hop prpducers widely considered the forefathers of the lo-fi hip-hop genre." size 24
+                        textbutton "Nujabes":
+                            action SetVariable("popup_page", "nujabes")
+
+                        textbutton "J Dilla":
+                            action SetVariable("popup_page", "dilla")
+
+                        textbutton "ChilledCow":
+                            action SetVariable("popup_page", "chilled")
+                        
+                        textbutton "Close":
+                            action Return()
+
+                    elif popup_page == "nujabes":
+                        text "{b}Nujabes{/b} —— The Godfather of Lo-Fi Hip-Hop" size 32
+                        text "Nujabes was a Japanese music producer best known for his atmospheric instrumental mixes sampling from hip-hop, soul, and jazz, as well as incorporating elements of trip hop, break beat, downtempo, and ambient music. Unfortunately, he died in a traffic collision at the age of 36 in 2010. Although relatively niche during his lifetime, he has since achieved posthumous acclaim and been referred as the godfather of lo-fi hip hop." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+                        textbutton "Close":
+                            action Return()
+                    elif popup_page == "dilla":
+                        text "{b}J Dilla{/b} —— The Godfather of Modern Beatmaking" size 32
+                        text "J Dilla was an American record producer, rapper, and composer. He emerged from the mid-1990s underground hip-hop scene in Detroit, Michigan, as a member of the group Slum Village. He was a founding member of the Soulquarians, a musical collective active during the late 1990s and early 2000s. He died at the age of 32 from a combination of TTP and lupus. Despite a short mainstream career, he is widely considered to be one of the most influential producers in hip-hop and popular music." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+                        textbutton "Close":
+                            action Return()
+                    elif popup_page == "chilled":
+                        text "{b}ChilledCow{/b} —— The Lofi Girl" size 32
+                        text "Lofi Girl, formerly known as ChilledCow until 2021, is a French YouTube channel and music label established in 2017. It provides livestreams of lo-fi hip hop music 24/7, accompanied by a Japanese-style animation of a girl, officially named Jade, studying or relaxing in her bedroom with a cat on the window. The channel offers several videos and livestreams of lo-fi music in hip hop style. The best known video is a live stream of lo-fi music that has run for several years." size 24
+                        textbutton "Back":
+                            action SetVariable("popup_page", "menu")
+                        textbutton "Close":
+                            action Return()
+
 
 
 

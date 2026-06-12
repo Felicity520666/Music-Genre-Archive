@@ -1,75 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/script.rpy", line 468, in analyze_screen
-    screen knowledge_periods():
-  File "game/script.rpy", line 468, in analyze
-    screen knowledge_periods():
-  File "game/script.rpy", line 468, in analyze
-    screen knowledge_periods():
-  File "game/script.rpy", line 470, in analyze
-    frame:
-  File "game/script.rpy", line 470, in analyze
-    frame:
-  File "game/script.rpy", line 476, in analyze
-    vbox:
-  File "game/script.rpy", line 476, in analyze
-    vbox:
-  File "game/script.rpy", line 478, in analyze
-    if pop_up = "menu":
-  File "game/script.rpy", line 478
-    pop_up = "menu"
-           ^^^^^^^^
-SyntaxError: invalid syntax
+While running game code:
+  File "game/script.rpy", line 541, in script
+    call screen lofi_artists
+renpy.display.screen.ScreenNotFound: Screen 'lofi_artists' is not known.
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "renpy/bootstrap.py", line 376, in bootstrap
-    renpy.main.main()
-    ~~~~~~~~~~~~~~~^^
-  File "renpy/main.py", line 614, in main
-    run(restart)
-    ~~~^^^^^^^^^
-  File "renpy/main.py", line 78, in run
-    renpy.display.screen.analyze_screens()
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "renpy/display/screen.py", line 1006, in analyze_screens
-    s.ast.analyze_screen()
-    ~~~~~~~~~~~~~~~~~~~~^^
-  File "game/script.rpy", line 468, in analyze_screen
-    screen knowledge_periods():
-  File "game/script.rpy", line 468, in analyze
-    screen knowledge_periods():
-  File "game/script.rpy", line 468, in analyze
-    screen knowledge_periods():
-  File "game/script.rpy", line 470, in analyze
-    frame:
-  File "game/script.rpy", line 470, in analyze
-    frame:
-  File "game/script.rpy", line 476, in analyze
-    vbox:
-  File "game/script.rpy", line 476, in analyze
-    vbox:
-  File "game/script.rpy", line 478, in analyze
-    if pop_up = "menu":
-  File "renpy/pyanalysis.py", line 674, in is_constant_expr
-    node, literal = ccache.ast_eval_literal(expr)
-                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
-  File "renpy/pyanalysis.py", line 895, in ast_eval_literal
-    expr = py_compile(expr, "eval", ast_node=True)
-           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1247, in py_compile
-    raise e
-  File "renpy/python.py", line 1177, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, True)
-           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/script.rpy", line 478
-    pop_up = "menu"
-           ^^^^^^^^
-SyntaxError: invalid syntax
+  File "game/script.rpy", line 541, in script
+    call screen lofi_artists
+  File "renpy/ast.py", line 2231, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2195, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 379, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 695, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 334, in call_screen
+    renpy.exports.show_screen(_screen_name, *args, _transient=True, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 1355, in show_screen
+    raise ScreenNotFound(name[0])
+renpy.display.screen.ScreenNotFound: Screen 'lofi_artists' is not known.
 
 macOS-15.7.3-arm64-arm-64bit arm64
 Ren'Py 8.4.1.25072401
 Music Genre Archive 
-Mon May 18 13:33:40 2026
+Thu Jun 11 16:19:50 2026
