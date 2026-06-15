@@ -696,7 +696,7 @@ label choices:
                     if popup_page == "menu":
 
                         text "Extra Information: Nujabes, J Dilla, and ChilledCow" size 32
-                        text "They are legendary, highly influential hip-hop prpducers widely considered the forefathers of the lo-fi hip-hop genre." size 24
+                        text "They are legendary, highly influential hip-hop producers widely considered the forefathers of the lo-fi hip-hop genre." size 24
                         textbutton "Nujabes":
                             action SetVariable("popup_page", "nujabes")
 

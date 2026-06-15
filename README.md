@@ -8,14 +8,14 @@ An informative and musical visual novel made with Ren'Py!
 
 ## About The Game
 
-In this visual novel, I want to create something that is both fun. musical, and educational. It connects to my interest in music ♪♡, especially since I am currently studying music in class. I feel very inspired, but sometimes I also feel like I’m behind, because I don’t know many music genres or their different vibes. That’s why this visual novel will combine art and storytelling with educational content, helping players learn about different music genres in a creative and engaging way.𝄞⨾𓍢ִ໋🎧ྀི
+In this visual novel, I want to create something that is both fun, musical, and educational. It connects to my interest in music ♪♡, especially since I am currently studying music in class. I feel very inspired, but sometimes I also feel like I’m behind, because I don’t know many music genres or their different vibes. That’s why this visual novel will combine art and storytelling with educational content, helping players learn about different music genres in a creative and engaging way.𝄞⨾𓍢ִ໋🎧ྀི
 
 ## Features
 
 - Story-driven informative visual novel experience 
 - Choice-based dialogue moments 
 - Custom GUI and themed assets 
-- Optional pop-up extra information pages on supplemetary topics
+- Optional pop-up extra information pages on supplementary topics
 - Built with Ren'Py 
 - Go to preferences to adjust text speed, music volume, and much more!
 
